@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#f2f0e8">
-    <meta name="description" content="Gingiris Growth Tools now lives at tools.gingiris.com.">
+    <meta name="description" content="Gingiris Growth Tools 已迁移至 tools.gingiris.com。">
     <meta property="og:title" content="Growth Tools has moved.">
     <meta property="og:description" content="Find Gingiris Growth Tools at tools.gingiris.com.">
     <meta property="og:type" content="website">
@@ -12,56 +12,63 @@
     <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="assets/favicon.svg">
     <link rel="stylesheet" href="styles.css">
-    <title>Growth Tools has moved · Gingiris</title>
+    <title>Growth Tools 搬家了 · Gingiris</title>
     <script src="redirect.js" defer></script>
   </head>
   <body>
     <header class="topbar">
-      <a class="brand destination-link" href="https://tools.gingiris.com" aria-label="Go to Gingiris Growth Tools">
+      <a class="brand destination-link" href="https://tools.gingiris.com" aria-label="前往 Gingiris Growth Tools" data-i18n-aria="brandAria">
         <span class="brand-dot" aria-hidden="true"></span>
         <strong>Gingiris</strong>
         <span>Growth Tools</span>
       </a>
-      <span class="status">A small change of address</span>
+      <div class="topbar-right">
+        <span class="status" data-i18n="status">站点搬家通知</span>
+        <div class="language-switcher" aria-label="语言选择" data-i18n-aria="languageAria">
+          <button type="button" data-language="zh-CN" aria-pressed="true">中文</button>
+          <span aria-hidden="true">/</span>
+          <button type="button" data-language="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
     </header>
 
     <main>
       <section class="notice">
         <div class="margin-note" aria-hidden="true">
-          <span>NOTICE</span>
-          <span>05 SEP 2026</span>
+          <span data-i18n="notice">公告</span>
+          <span data-i18n="date">2026.09.05</span>
         </div>
 
         <div class="content">
-          <p class="kicker">Hello — quick update.</p>
-          <h1>We moved.</h1>
-          <p class="intro">Growth Tools has a new home. Nothing else has changed: the same tools, playbooks, and resources are waiting for you there.</p>
+          <p class="kicker" data-i18n="kicker">嗨，告诉你一件小事。</p>
+          <h1 data-i18n="headline">我们搬家了。</h1>
+          <p class="intro" data-i18n="intro">Growth Tools 换了一个新地址。其他都没变：熟悉的工具、实战手册和资源，都在那里等你。</p>
 
           <div class="address-change">
             <div class="address old-address">
-              <span>OLD ADDRESS</span>
+              <span data-i18n="oldAddress">旧地址</span>
               <s>gingiris.tools</s>
             </div>
             <span class="change-arrow" aria-hidden="true">→</span>
             <div class="address new-address">
-              <span>NEW ADDRESS</span>
+              <span data-i18n="newAddress">新地址</span>
               <strong>tools.gingiris.com</strong>
             </div>
           </div>
 
           <div class="actions">
-            <a class="button destination-link" href="https://tools.gingiris.com">Take me there <span aria-hidden="true">↗</span></a>
-            <p>Taking you there in <strong id="countdown">6</strong> <span id="unit">seconds</span>.</p>
+            <a class="button destination-link" href="https://tools.gingiris.com"><span data-i18n="button">去新站看看</span> <span aria-hidden="true">↗</span></a>
+            <p><span id="count-prefix">将在 </span><strong id="countdown">6</strong><span id="count-suffix"> 秒后带你前往新站。</span></p>
           </div>
 
-          <div class="progress" aria-label="Redirecting in 6 seconds" role="status"><span></span></div>
+          <div class="progress" aria-label="将在 6 秒后跳转" role="status"><span></span></div>
         </div>
       </section>
     </main>
 
     <footer>
-      <span>100+ growth tools · 40+ AI skills</span>
-      <span>See you over there.</span>
+      <span data-i18n="footerStats">100+ 款增长工具 · 40+ 个 AI Skills</span>
+      <span data-i18n="footerBye">新站见。</span>
     </footer>
   </body>
 </html>

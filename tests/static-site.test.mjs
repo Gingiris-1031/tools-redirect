@@ -10,10 +10,15 @@ test("static page points only to the new Growth Tools domain", async () => {
     readFile(new URL("redirect.js", root), "utf8"),
     readFile(new URL(".github/workflows/deploy-pages.yml", root), "utf8"),
   ]);
-  assert.match(html, /Growth Tools has moved/);
+  assert.match(html, /<html lang="zh-CN">/);
+  assert.match(html, /我们搬家了。/);
+  assert.match(html, /data-language="zh-CN"/);
+  assert.match(html, /data-language="en"/);
+  assert.match(script, /defaultLanguage = "zh-CN"/);
+  assert.match(script, /tools-redirect-language/);
   assert.match(script, /https:\/\/tools\.gingiris\.com/);
   assert.match(html, /id="countdown">6</);
-  assert.match(html, /Redirecting in 6 seconds/);
+  assert.match(html, /将在 6 秒后跳转/);
   assert.match(script, /redirectSeconds = 6/);
   assert.doesNotMatch(`${html}\n${script}`, /https:\/\/gingiris\.tools/);
   assert.match(script, /window\.location\.pathname/);

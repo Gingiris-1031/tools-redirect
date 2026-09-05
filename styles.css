@@ -33,7 +33,12 @@ body {
 .brand-dot { width: 13px; height: 13px; border-radius: 50%; background: var(--green); }
 .brand strong { font-size: 20px; letter-spacing: -.04em; }
 .brand span:last-child { margin-left: 5px; padding-left: 15px; border-left: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+.topbar-right { display: flex; align-items: center; gap: 24px; }
 .status { color: var(--muted); font-size: 12px; }
+.language-switcher { display: flex; align-items: center; gap: 7px; color: var(--muted); font-size: 11px; }
+.language-switcher button { padding: 3px 0; border: 0; border-bottom: 1px solid transparent; background: none; color: inherit; font: inherit; cursor: pointer; }
+.language-switcher button[aria-pressed="true"] { border-color: var(--ink); color: var(--ink); }
+.language-switcher button:focus-visible { outline: 2px solid var(--green); outline-offset: 3px; }
 
 main { display: grid; }
 
