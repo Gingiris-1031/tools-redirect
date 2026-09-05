@@ -2,6 +2,10 @@
 
 # dependencies
 /node_modules
+/.vite
+/.wrangler
+/dist
+/_site
 /.pnp
 .pnp.*
 .yarn/*
