@@ -1,6 +1,6 @@
 (() => {
   const targetOrigin = "https://tools.gingiris.com";
-  const redirectSeconds = 3;
+  const redirectSeconds = 6;
   const pagesPrefix = window.location.hostname.endsWith("github.io") ? "/tools-redirect" : "";
   const path = pagesPrefix && window.location.pathname.startsWith(pagesPrefix)
     ? window.location.pathname.slice(pagesPrefix.length) || "/"

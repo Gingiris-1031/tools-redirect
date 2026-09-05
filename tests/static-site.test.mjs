@@ -12,6 +12,9 @@ test("static page points only to the new Growth Tools domain", async () => {
   ]);
   assert.match(html, /Growth Tools has moved/);
   assert.match(script, /https:\/\/tools\.gingiris\.com/);
+  assert.match(html, /id="countdown">6</);
+  assert.match(html, /Redirecting in 6 seconds/);
+  assert.match(script, /redirectSeconds = 6/);
   assert.doesNotMatch(`${html}\n${script}`, /https:\/\/gingiris\.tools/);
   assert.match(script, /window\.location\.pathname/);
   assert.match(script, /github\.io/);
